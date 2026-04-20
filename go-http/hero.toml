@@ -1,0 +1,11 @@
+[app]
+name = "go-http-app"
+
+[deploy]
+cpu = 2
+memory_mb = 1024
+port = 3000
+health_path = "/healthz"
+
+[env] 
+LOG_LEVEL = "debug"

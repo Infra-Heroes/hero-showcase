@@ -1,0 +1,12 @@
+[app]
+name = "java-springboot-app"
+
+[deploy]
+cpu = 2
+memory_mb = 1024
+port = 8080
+health_path = "/healthz"
+
+[env]
+LOG_LEVEL = "info"
+SERVER_PORT = "8080"

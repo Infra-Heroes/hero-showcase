@@ -1,0 +1,11 @@
+[app]
+name = "python-fastapi-app"
+
+[deploy]
+cpu = 1
+memory_mb = 512
+port = 8000
+health_path = "/healthz"
+
+[env]
+LOG_LEVEL = "debug"
