@@ -9,3 +9,8 @@ health_path = "/healthz"
 
 [env]
 LOG_LEVEL = "debug"
+
+[labels]
+"environment" = "demo"
+"framework" = "fastapi"
+"team" = "infra-heroes"
