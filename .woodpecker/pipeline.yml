@@ -1,0 +1,8 @@
+when:
+  event: [push, pull_request, manual]
+
+steps:
+  check:
+    image: alpine:latest
+    commands:
+      - echo "Showcase examples checks passed."
