@@ -1,0 +1,11 @@
+[app]
+name = "feature-scale-to-zero"
+
+[deploy]
+cpu = 1
+memory_mb = 128
+port = 8080
+health_path = "/"
+min_replicas = 1
+max_replicas = 3
+scale_to_zero = true

@@ -1,0 +1,15 @@
+[app]
+name = "feature-volumes"
+
+[deploy]
+cpu = 1
+memory_mb = 128
+port = 8080
+health_path = "/"
+min_replicas = 1
+max_replicas = 1
+
+[[volumes]]
+name = "data-vol"
+size = "1Gi"
+path = "/app/data"

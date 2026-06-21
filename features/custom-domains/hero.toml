@@ -1,0 +1,11 @@
+[app]
+name = "feature-custom-domains"
+custom_domains = ["api.example.com", "app.example.com"]
+
+[deploy]
+cpu = 1
+memory_mb = 128
+port = 8080
+health_path = "/"
+min_replicas = 1
+max_replicas = 1

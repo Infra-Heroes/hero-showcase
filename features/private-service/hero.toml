@@ -1,0 +1,12 @@
+[app]
+name = "feature-private-service"
+
+[deploy]
+cpu = 1
+memory_mb = 128
+port = 8080
+health_path = "/health"
+health_check_type = "http"
+min_replicas = 1
+max_replicas = 1
+private = true
