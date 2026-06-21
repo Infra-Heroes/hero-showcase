@@ -16,10 +16,27 @@ This repository provides boilerplate code and configurations (`hero.toml`) to ge
 
 ## 📑 Table of Contents
 
+- [Platform Features](#-platform-features)
 - [Frontend & Static Sites](#-frontend--static-sites)
 - [Backend & APIs](#-backend--apis)
 - [Usage & Deployment](#-usage--deployment)
 - [Validate Your Config](#-validate-your-config)
+
+---
+
+## 🛠️ Platform Features
+
+Explore NanoStack's powerful deployment features through these minimal configuration examples. These examples demonstrate the core capabilities of the `hero.toml` configuration file.
+
+| Feature | Example Path | Description |
+| :--- | :--- | :--- |
+| **Volumes** | [`/features/volumes`](./features/volumes) | Demonstrates persistent storage mounts via `[[volumes]]`. |
+| **Secrets** | [`/features/secrets`](./features/secrets) | Demonstrates injecting sensitive data using `secret:KEY`. |
+| **Environment Variables** | [`/features/env-variables`](./features/env-variables) | Demonstrates configuring static environment variables. |
+| **Autoscaling** | [`/features/autoscaling`](./features/autoscaling) | Demonstrates scale-out behavior using `min_replicas` and `max_replicas`. |
+| **Scale to Zero** | [`/features/scale-to-zero`](./features/scale-to-zero) | Demonstrates serverless cold-start capability with `scale_to_zero = true`. |
+| **Private Services** | [`/features/private-service`](./features/private-service) | Demonstrates internal-only networking using `private = true`. |
+| **Custom Domains** | [`/features/custom-domains`](./features/custom-domains) | Demonstrates custom CNAMEs via `custom_domains`. |
 
 ---
 
