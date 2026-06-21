@@ -8,7 +8,7 @@
 
 This repository provides boilerplate code and configurations (`hero.toml`) to get your applications running on NanoStack in seconds. Whether you're building a static frontend or a robust backend API, you'll find a starting point here.
 
-[Explore NanoStack](https://nanostack.infraheroes.com) • [Documentation](https://nanostack.infraheroes.com/docs) • [heroctl CLI](https://github.com/Infra-Heroes/heroctl)
+[Explore NanoStack](https://www.infra-heroes.de) • [Documentation](https://www.infra-heroes.de/docs) • [heroctl CLI](https://github.com/Infra-Heroes/heroctl)
 
 </div>
 
