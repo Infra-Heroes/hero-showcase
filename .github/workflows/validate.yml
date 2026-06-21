@@ -16,7 +16,7 @@ jobs:
       - id: set-examples
         run: |
           # Find all directories containing a hero.toml file
-          EXAMPLES=$(find apps features -name "hero.toml" | xargs dirname | jq -R -s -c 'split("\n")[:-1]')
+          EXAMPLES=$(find features -name "hero.toml" | xargs dirname | jq -R -s -c 'split("\n")[:-1]')
           echo "Found examples: $EXAMPLES"
           echo "examples=$EXAMPLES" >> $GITHUB_OUTPUT
 
