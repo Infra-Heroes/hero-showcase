@@ -7,7 +7,7 @@ template = '''
 <html>
 <head><title>Private Service Demo</title></head>
 <body>
-    <h1>NanoStack Private Service Demo</h1>
+    <h1>Infra-Heroes Private Service Demo</h1>
     <p>This service is marked as <code>private = true</code>. It shouldn't be accessible via the public load balancer.</p>
     <h3>Your Connection Details:</h3>
     <ul>

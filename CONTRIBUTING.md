@@ -1,4 +1,4 @@
-# Contributing to NanoStack Showcase
+# Contributing to Infra-Heroes Showcase
 
 We'd love your help to grow our collection of examples!
 

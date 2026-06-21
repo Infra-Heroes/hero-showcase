@@ -24,7 +24,7 @@ This repository provides boilerplate code and configurations (`hero.toml`) to ge
 
 ## 🛠️ Platform Features
 
-Explore NanoStack's powerful deployment features through these minimal configuration examples. These examples demonstrate the core capabilities of the `hero.toml` configuration file.
+Explore Infra-Heroes's powerful deployment features through these minimal configuration examples. These examples demonstrate the core capabilities of the `hero.toml` configuration file.
 
 | Feature | Example Path | Description |
 | :--- | :--- | :--- |

@@ -8,8 +8,8 @@ template = '''
 <html>
 <head><title>Secrets Demo</title></head>
 <body>
-    <h1>NanoStack Secrets Demo</h1>
-    <p>This checks if secrets are properly injected by NanoStack or if they are still raw "secret:KEY" strings.</p>
+    <h1>Infra-Heroes Secrets Demo</h1>
+    <p>This checks if secrets are properly injected by Infra-Heroes or if they are still raw "secret:KEY" strings.</p>
     <div style="padding: 20px; border: 2px solid {{ 'green' if unlocked else 'red' }};">
         <h2>Vault Status: {{ 'UNLOCKED 🔓' if unlocked else 'LOCKED 🔒' }}</h2>
         <ul>

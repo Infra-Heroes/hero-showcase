@@ -10,8 +10,8 @@ template = '''
 <html>
 <head><title>Autoscaling Demo</title></head>
 <body>
-    <h1>NanoStack Autoscaling Demo</h1>
-    <p>Use the endpoint below to artificially spike CPU usage and trigger NanoStack's auto-scaler!</p>
+    <h1>Infra-Heroes Autoscaling Demo</h1>
+    <p>Use the endpoint below to artificially spike CPU usage and trigger Infra-Heroes's auto-scaler!</p>
     <form action="/stress" method="POST">
         <button type="submit" style="padding:10px 20px; font-size: 16px; background: red; color: white;">🔥 Spike CPU for 10 seconds 🔥</button>
     </form>

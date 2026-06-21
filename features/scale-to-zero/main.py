@@ -13,7 +13,7 @@ template = '''
 <html>
 <head><title>Scale-to-Zero Demo</title></head>
 <body>
-    <h1>NanoStack Scale-to-Zero Demo</h1>
+    <h1>Infra-Heroes Scale-to-Zero Demo</h1>
     <p>This app takes 3 seconds to boot. If you let it scale to zero by being idle, the next request will experience a 3-second cold start latency. That proves it scaled down and back up!</p>
 </body>
 </html>

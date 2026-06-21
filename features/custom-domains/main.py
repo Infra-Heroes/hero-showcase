@@ -7,7 +7,7 @@ template = '''
 <html>
 <head><title>Custom Domains Demo</title></head>
 <body>
-    <h1>NanoStack Custom Domains Demo</h1>
+    <h1>Infra-Heroes Custom Domains Demo</h1>
     <p>This demonstrates routing via custom CNAMEs.</p>
     <h3>You accessed this service via: <span style="color: blue;">{{ host }}</span></h3>
 </body>

@@ -9,7 +9,7 @@ template = '''
 <html>
 <head><title>Volumes Demo</title></head>
 <body>
-    <h1>NanoStack Volumes Demo</h1>
+    <h1>Infra-Heroes Volumes Demo</h1>
     <p>This demonstrates writing to a persistent volume mounted at <code>/app/data</code>.</p>
     <form method="POST">
         <input type="text" name="content" placeholder="Enter message to save..." required>
