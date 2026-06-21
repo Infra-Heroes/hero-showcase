@@ -1,36 +1,43 @@
+from flask import Flask, request, render_template_string
 import os
-from flask import Flask, jsonify
 
 app = Flask(__name__)
+DATA_FILE = '/app/data/test.txt'
 
-@app.route('/')
+template = '''
+<!DOCTYPE html>
+<html>
+<head><title>Volumes Demo</title></head>
+<body>
+    <h1>NanoStack Volumes Demo</h1>
+    <p>This demonstrates writing to a persistent volume mounted at <code>/app/data</code>.</p>
+    <form method="POST">
+        <input type="text" name="content" placeholder="Enter message to save..." required>
+        <button type="submit">Save</button>
+    </form>
+    <h3>Current File Content:</h3>
+    <pre style="background:#eee;padding:10px;">{{ content }}</pre>
+</body>
+</html>
+'''
+
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return jsonify({
-        "message": "Hello from NanoStack Showcase!",
-        "feature": "volumes",
-        "env": dict(os.environ)
-    })
+    if request.method == 'POST':
+        os.makedirs('/app/data', exist_ok=True)
+        with open(DATA_FILE, 'w') as f:
+            f.write(request.form['content'])
+            
+    content = "File not found or empty."
+    if os.path.exists(DATA_FILE):
+        with open(DATA_FILE, 'r') as f:
+            content = f.read()
+            
+    return render_template_string(template, content=content)
 
 @app.route('/health')
 def health():
     return "OK", 200
-
-
-@app.route('/data')
-def read_data():
-    try:
-        with open('/app/data/test.txt', 'r') as f:
-            return f.read()
-    except FileNotFoundError:
-        return "File not found. Try writing to it first!", 404
-
-@app.route('/data/<content>', methods=['POST'])
-def write_data(content):
-    os.makedirs('/app/data', exist_ok=True)
-    with open('/app/data/test.txt', 'w') as f:
-        f.write(content)
-    return "Data written successfully to persistent volume!", 200
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)

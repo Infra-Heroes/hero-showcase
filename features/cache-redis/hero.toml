@@ -1,0 +1,12 @@
+[app]
+name = "feature-cache-redis"
+
+[deploy]
+cpu = 1
+memory_mb = 128
+port = 6379
+health_path = "/"
+health_check_type = "tcp"
+min_replicas = 1
+max_replicas = 1
+private = true

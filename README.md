@@ -35,6 +35,8 @@ Explore NanoStack's powerful deployment features through these minimal configura
 | **Scale to Zero** | [`/features/scale-to-zero`](./features/scale-to-zero) | Demonstrates serverless cold-start capability with `scale_to_zero = true`. |
 | **Private Services** | [`/features/private-service`](./features/private-service) | Demonstrates internal-only networking using `private = true`. |
 | **Custom Domains** | [`/features/custom-domains`](./features/custom-domains) | Demonstrates custom CNAMEs via `custom_domains`. |
+| **Database (PostgreSQL)** | [`/features/database-postgres`](./features/database-postgres) | Demonstrates running a Postgres database with persistent volumes and secrets. |
+| **Cache (Redis)** | [`/features/cache-redis`](./features/cache-redis) | Demonstrates running a private Redis cache using TCP healthchecks. |
 
 
 
