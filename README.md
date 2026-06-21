@@ -29,11 +29,11 @@ Deploy high-performance web applications and static sites effortlessly.
 
 | Framework / Language | Example Path | Description |
 | :--- | :--- | :--- |
-| **HTML Static** | [`/html-static`](./html-static) | A simple static HTML site served by NGINX. |
-| **React + Vite** | [`/react-vite`](./react-vite) | A blazing fast modern React app bundled with Vite and served by NGINX. |
-| **Next.js** | [`/nextjs`](./nextjs) | A production-ready Next.js SSR standalone build. |
-| **SvelteKit** | [`/sveltekit`](./sveltekit) | A full-stack Svelte app built for Node.js. |
-| **Vue + Nuxt** | [`/vue-nuxt`](./vue-nuxt) | An intuitive Vue framework for building universal applications. |
+| **HTML Static** | [`/apps/html/html-static`](./apps/html/html-static) | A simple static HTML site served by NGINX. |
+| **React + Vite** | [`/apps/javascript/react-vite`](./apps/javascript/react-vite) | A blazing fast modern React app bundled with Vite and served by NGINX. |
+| **Next.js** | [`/apps/javascript/nextjs`](./apps/javascript/nextjs) | A production-ready Next.js SSR standalone build. |
+| **SvelteKit** | [`/apps/javascript/sveltekit`](./apps/javascript/sveltekit) | A full-stack Svelte app built for Node.js. |
+| **Vue + Nuxt** | [`/apps/javascript/vue-nuxt`](./apps/javascript/vue-nuxt) | An intuitive Vue framework for building universal applications. |
 
 ---
 
@@ -43,16 +43,16 @@ Robust and scalable backend services written in your favorite languages.
 
 | Framework / Language | Example Path | Description |
 | :--- | :--- | :--- |
-| **Go (Stdlib)** | [`/go-http`](./go-http) | A highly concurrent, dependency-free HTTP server in Go. |
-| **Java Spring Boot** | [`/java-springboot`](./java-springboot) | Enterprise-grade REST API using Spring Boot. |
-| **C# .NET Core** | [`/csharp-dotnet`](./csharp-dotnet) | A robust ASP.NET Core minimal API. |
-| **Node.js Express** | [`/nodejs-express`](./nodejs-express) | A fast, unopinionated, minimalist web framework for Node.js. |
-| **Python FastAPI** | [`/python-fastapi`](./python-fastapi) | High-performance Python API using ASGI and FastAPI. |
-| **Python Flask** | [`/python-flask`](./python-flask) | A lightweight WSGI web application framework in Python. |
-| **Python Django** | [`/python-django`](./python-django) | A high-level Python web framework that encourages rapid development. |
-| **Rust Axum** | [`/rust-axum`](./rust-axum) | An incredibly fast, ergonomic, and modular web framework built with Tokio. |
-| **Ruby on Rails** | [`/ruby-rails`](./ruby-rails) | A classic MVC web application framework optimized for developer happiness. |
-| **PHP Laravel** | [`/php-laravel`](./php-laravel) | The PHP framework for web artisans, served with PHP-FPM. |
+| **Go (Stdlib)** | [`/apps/go/go-http`](./apps/go/go-http) | A highly concurrent, dependency-free HTTP server in Go. |
+| **Java Spring Boot** | [`/apps/java/java-springboot`](./apps/java/java-springboot) | Enterprise-grade REST API using Spring Boot. |
+| **C# .NET Core** | [`/apps/csharp/csharp-dotnet`](./apps/csharp/csharp-dotnet) | A robust ASP.NET Core minimal API. |
+| **Node.js Express** | [`/apps/javascript/nodejs-express`](./apps/javascript/nodejs-express) | A fast, unopinionated, minimalist web framework for Node.js. |
+| **Python FastAPI** | [`/apps/python/python-fastapi`](./apps/python/python-fastapi) | High-performance Python API using ASGI and FastAPI. |
+| **Python Flask** | [`/apps/python/python-flask`](./apps/python/python-flask) | A lightweight WSGI web application framework in Python. |
+| **Python Django** | [`/apps/python/python-django`](./apps/python/python-django) | A high-level Python web framework that encourages rapid development. |
+| **Rust Axum** | [`/apps/rust/rust-axum`](./apps/rust/rust-axum) | An incredibly fast, ergonomic, and modular web framework built with Tokio. |
+| **Ruby on Rails** | [`/apps/ruby/ruby-rails`](./apps/ruby/ruby-rails) | A classic MVC web application framework optimized for developer happiness. |
+| **PHP Laravel** | [`/apps/php/php-laravel`](./apps/php/php-laravel) | The PHP framework for web artisans, served with PHP-FPM. |
 
 ---
 
