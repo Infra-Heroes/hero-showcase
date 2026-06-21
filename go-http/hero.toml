@@ -2,8 +2,8 @@
 name = "go-http-app"
 
 [deploy]
-cpu = 2
-memory_mb = 1024
+cpu = 1
+memory_mb = 512
 port = 3000
 health_path = "/healthz"
 min_replicas = 2
