@@ -1,0 +1,10 @@
+[app]
+name = "html-static-app"
+
+[deploy]
+cpu = 1
+memory_mb = 128
+port = 80
+health_path = "/"
+min_replicas = 1
+max_replicas = 2

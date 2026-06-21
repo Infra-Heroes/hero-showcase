@@ -1,14 +1,14 @@
 <div align="center">
 
-# 🌟 NanoStack App Showcase
+# 🌟 Infra-Heroes App Showcase
 
-**A curated collection of deployment-ready examples for the NanoStack PaaS.**
+**A curated collection of deployment-ready examples for the Infra-Heroes PaaS.**
 
 [![Validate](https://github.com/Infra-Heroes/showcase/actions/workflows/validate.yml/badge.svg)](https://github.com/Infra-Heroes/showcase/actions/workflows/validate.yml)
 
-This repository provides boilerplate code and configurations (`hero.toml`) to get your applications running on NanoStack in seconds. Whether you're building a static frontend or a robust backend API, you'll find a starting point here.
+This repository provides boilerplate code and configurations (`hero.toml`) to get your applications running on Infra-Heroes in seconds. Whether you're building a static frontend or a robust backend API, you'll find a starting point here.
 
-[Explore NanoStack](https://www.infra-heroes.de) • [Documentation](https://www.infra-heroes.de/docs) • [heroctl CLI](https://github.com/Infra-Heroes/heroctl)
+[Explore Infra-Heroes](https://www.infra-heroes.de) • [Documentation](https://www.infra-heroes.de/docs) • [heroctl CLI](https://github.com/Infra-Heroes/heroctl)
 
 </div>
 
@@ -29,8 +29,11 @@ Deploy high-performance web applications and static sites effortlessly.
 
 | Framework / Language | Example Path | Description |
 | :--- | :--- | :--- |
+| **HTML Static** | [`/html-static`](./html-static) | A simple static HTML site served by NGINX. |
 | **React + Vite** | [`/react-vite`](./react-vite) | A blazing fast modern React app bundled with Vite and served by NGINX. |
 | **Next.js** | [`/nextjs`](./nextjs) | A production-ready Next.js SSR standalone build. |
+| **SvelteKit** | [`/sveltekit`](./sveltekit) | A full-stack Svelte app built for Node.js. |
+| **Vue + Nuxt** | [`/vue-nuxt`](./vue-nuxt) | An intuitive Vue framework for building universal applications. |
 
 ---
 
@@ -42,9 +45,11 @@ Robust and scalable backend services written in your favorite languages.
 | :--- | :--- | :--- |
 | **Go (Stdlib)** | [`/go-http`](./go-http) | A highly concurrent, dependency-free HTTP server in Go. |
 | **Java Spring Boot** | [`/java-springboot`](./java-springboot) | Enterprise-grade REST API using Spring Boot. |
+| **C# .NET Core** | [`/csharp-dotnet`](./csharp-dotnet) | A robust ASP.NET Core minimal API. |
 | **Node.js Express** | [`/nodejs-express`](./nodejs-express) | A fast, unopinionated, minimalist web framework for Node.js. |
 | **Python FastAPI** | [`/python-fastapi`](./python-fastapi) | High-performance Python API using ASGI and FastAPI. |
 | **Python Flask** | [`/python-flask`](./python-flask) | A lightweight WSGI web application framework in Python. |
+| **Python Django** | [`/python-django`](./python-django) | A high-level Python web framework that encourages rapid development. |
 | **Rust Axum** | [`/rust-axum`](./rust-axum) | An incredibly fast, ergonomic, and modular web framework built with Tokio. |
 | **Ruby on Rails** | [`/ruby-rails`](./ruby-rails) | A classic MVC web application framework optimized for developer happiness. |
 | **PHP Laravel** | [`/php-laravel`](./php-laravel) | The PHP framework for web artisans, served with PHP-FPM. |
