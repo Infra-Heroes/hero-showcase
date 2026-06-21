@@ -4,11 +4,10 @@ We'd love your help to grow our collection of examples!
 
 ## How to add a new example
 
-1. Choose the language folder under `apps/` (or create a new one).
-2. Create a folder for your framework or app type (e.g. `apps/go/go-fiber`).
-3. Add a minimal `hero.toml` configuring the app deployment.
-4. Add a `Dockerfile`.
-5. Update the main `README.md` to include your new example in the list!
+1. Create a new folder under `features/` for the capability you want to demonstrate (e.g. `features/my-new-feature`).
+2. Add a minimal `hero.toml` configuring the deployment.
+3. Add a `Dockerfile` and a simple Python Flask app (`main.py`) that actively showcases the feature via an HTTP endpoint.
+4. Update the main `README.md` to include your new example in the "Platform Features" table!
 
 ## Pre-commit Hooks
 We use `pre-commit` to maintain code quality. Please install it before committing:
