@@ -18,5 +18,4 @@ POSTGRES_DB = "herodb"
 
 [[volumes]]
 name = "pg-data"
-size = "5Gi"
-path = "/var/lib/postgresql/data"
+mount = "/var/lib/postgresql/data"

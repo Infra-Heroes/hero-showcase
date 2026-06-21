@@ -11,5 +11,4 @@ max_replicas = 1
 
 [[volumes]]
 name = "data-vol"
-size = "1Gi"
-path = "/app/data"
+mount = "/app/data"
