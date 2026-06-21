@@ -1,0 +1,10 @@
+[app]
+name = "react-vite-app"
+
+[deploy]
+cpu = 1
+memory_mb = 256
+port = 80
+health_path = "/"
+min_replicas = 1
+max_replicas = 2

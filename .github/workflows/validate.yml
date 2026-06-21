@@ -1,0 +1,72 @@
+name: Validate hero.toml
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Loop over all directories to find hero.toml files and validate them
+      - name: Validate all hero.toml files
+        run: |
+          for dir in $(find . -type d -not -path "*/\.*"); do
+            if [ -f "$dir/hero.toml" ]; then
+              echo "Validating $dir/hero.toml"
+            fi
+          done
+
+      - name: Validate Go HTTP
+        uses: Infra-Heroes/heroctl@main
+        with:
+          config_path: "go-http/hero.toml"
+          
+      - name: Validate Java Spring Boot
+        uses: Infra-Heroes/heroctl@main
+        with:
+          config_path: "java-springboot/hero.toml"
+          
+      - name: Validate Node Express
+        uses: Infra-Heroes/heroctl@main
+        with:
+          config_path: "nodejs-express/hero.toml"
+
+      - name: Validate Python FastAPI
+        uses: Infra-Heroes/heroctl@main
+        with:
+          config_path: "python-fastapi/hero.toml"
+
+      - name: Validate Python Flask
+        uses: Infra-Heroes/heroctl@main
+        with:
+          config_path: "python-flask/hero.toml"
+
+      - name: Validate React Vite
+        uses: Infra-Heroes/heroctl@main
+        with:
+          config_path: "react-vite/hero.toml"
+
+      - name: Validate Next.js
+        uses: Infra-Heroes/heroctl@main
+        with:
+          config_path: "nextjs/hero.toml"
+
+      - name: Validate Rust Axum
+        uses: Infra-Heroes/heroctl@main
+        with:
+          config_path: "rust-axum/hero.toml"
+
+      - name: Validate Ruby Rails
+        uses: Infra-Heroes/heroctl@main
+        with:
+          config_path: "ruby-rails/hero.toml"
+
+      - name: Validate PHP Laravel
+        uses: Infra-Heroes/heroctl@main
+        with:
+          config_path: "php-laravel/hero.toml"

@@ -1,26 +1,103 @@
-# Infra Heroes Showcase
+<div align="center">
 
-A collection of example applications configured for deployment via `heroctl`. Each example includes a `hero.toml` deployment descriptor and a `Dockerfile`.
+# 🌟 NanoStack App Showcase
 
-## Examples Included
+**A curated collection of deployment-ready examples for the NanoStack PaaS.**
 
-| Example | Runtime | Framework | Port |
-| :--- | :--- | :--- | :--- |
-| [Go HTTP](./go-http) | Go | Standard Library | 3000 |
-| [Python Flask](./python-flask) | Python | Flask | 5000 |
-| [Python FastAPI](./python-fastapi) | Python | FastAPI | 8000 |
-| [Node.js Express](./nodejs-express) | Node.js | Express | 8080 |
-| [Java Spring Boot](./java-springboot) | Java | Spring Boot | 8080 |
+[![Validate](https://github.com/Infra-Heroes/showcase/actions/workflows/validate.yml/badge.svg)](https://github.com/Infra-Heroes/showcase/actions/workflows/validate.yml)
 
-### Common `heroctl` commands
+This repository provides boilerplate code and configurations (`hero.toml`) to get your applications running on NanoStack in seconds. Whether you're building a static frontend or a robust backend API, you'll find a starting point here.
+
+[Explore NanoStack](https://nanostack.infraheroes.com) • [Documentation](https://nanostack.infraheroes.com/docs) • [heroctl CLI](https://github.com/Infra-Heroes/heroctl)
+
+</div>
+
+---
+
+## 📑 Table of Contents
+
+- [Frontend & Static Sites](#-frontend--static-sites)
+- [Backend & APIs](#-backend--apis)
+- [Usage & Deployment](#-usage--deployment)
+- [Validate Your Config](#-validate-your-config)
+
+---
+
+## 🎨 Frontend & Static Sites
+
+Deploy high-performance web applications and static sites effortlessly.
+
+| Framework / Language | Example Path | Description |
+| :--- | :--- | :--- |
+| **React + Vite** | [`/react-vite`](./react-vite) | A blazing fast modern React app bundled with Vite and served by NGINX. |
+| **Next.js** | [`/nextjs`](./nextjs) | A production-ready Next.js SSR standalone build. |
+
+---
+
+## ⚙️ Backend & APIs
+
+Robust and scalable backend services written in your favorite languages.
+
+| Framework / Language | Example Path | Description |
+| :--- | :--- | :--- |
+| **Go (Stdlib)** | [`/go-http`](./go-http) | A highly concurrent, dependency-free HTTP server in Go. |
+| **Java Spring Boot** | [`/java-springboot`](./java-springboot) | Enterprise-grade REST API using Spring Boot. |
+| **Node.js Express** | [`/nodejs-express`](./nodejs-express) | A fast, unopinionated, minimalist web framework for Node.js. |
+| **Python FastAPI** | [`/python-fastapi`](./python-fastapi) | High-performance Python API using ASGI and FastAPI. |
+| **Python Flask** | [`/python-flask`](./python-flask) | A lightweight WSGI web application framework in Python. |
+| **Rust Axum** | [`/rust-axum`](./rust-axum) | An incredibly fast, ergonomic, and modular web framework built with Tokio. |
+| **Ruby on Rails** | [`/ruby-rails`](./ruby-rails) | A classic MVC web application framework optimized for developer happiness. |
+| **PHP Laravel** | [`/php-laravel`](./php-laravel) | The PHP framework for web artisans, served with PHP-FPM. |
+
+---
+
+## 🚀 Usage & Deployment
+
+Deploying any of these examples is as simple as using the `heroctl` CLI!
+
+1. **Install the CLI**:
+   ```bash
+   brew install Infra-Heroes/tap/heroctl
+   # or download from GitHub releases
+   ```
+
+2. **Login to your account**:
+   ```bash
+   heroctl login
+   ```
+
+3. **Deploy the app**:
+   Navigate to the example directory you want to deploy, and run:
+   ```bash
+   cd go-http
+   heroctl deploy
+   ```
+   
+That's it! `heroctl` will read the `hero.toml` file, package the context, and stream the build and deployment logs directly to your terminal.
+
+---
+
+## 🛡️ Validate Your Config
+
+You can check if your `hero.toml` syntax is correct at any time using the local validation tool:
 
 ```bash
-# Sign up
-heroctl signup
+heroctl validate
+```
 
-# Login
-heroctl login
+We also provide a **GitHub Action** to automatically validate your configurations in your CI/CD pipelines! Add this to your `.github/workflows/validate.yml`:
 
-# Build and deploy the current directory
-heroctl deploy --project ${PROJECT_NAME}
+```yaml
+name: Validate hero.toml
+on: [push, pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate hero.toml
+        uses: Infra-Heroes/heroctl@main
+        with:
+          config_path: "hero.toml"
 ```

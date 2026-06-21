@@ -1,0 +1,10 @@
+[app]
+name = "php-laravel-app"
+
+[deploy]
+cpu = 1
+memory_mb = 512
+port = 8000
+health_path = "/up"
+min_replicas = 1
+max_replicas = 2
