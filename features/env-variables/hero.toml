@@ -1,0 +1,14 @@
+[app]
+name = "feature-env-variables"
+
+[deploy]
+cpu = 1
+memory_mb = 128
+port = 8080
+health_path = "/"
+min_replicas = 1
+max_replicas = 1
+
+[env]
+LOG_LEVEL = "debug"
+ENVIRONMENT = "production"

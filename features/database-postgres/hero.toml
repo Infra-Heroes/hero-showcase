@@ -1,0 +1,21 @@
+[app]
+name = "feature-database-postgres"
+
+[deploy]
+cpu = 2
+memory_mb = 512
+port = 5432
+health_path = "/"
+health_check_type = "tcp"
+min_replicas = 1
+max_replicas = 1
+private = true
+
+[env]
+POSTGRES_PASSWORD = "secret:DB_PASS"
+POSTGRES_USER = "hero"
+POSTGRES_DB = "herodb"
+
+[[volumes]]
+name = "pg-data"
+mount = "/var/lib/postgresql/data"

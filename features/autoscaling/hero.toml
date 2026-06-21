@@ -1,0 +1,10 @@
+[app]
+name = "feature-autoscaling"
+
+[deploy]
+cpu = 2
+memory_mb = 256
+port = 8080
+health_path = "/"
+min_replicas = 2
+max_replicas = 10
