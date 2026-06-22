@@ -47,4 +47,6 @@ This will:
 | **Warm Latency (Average)** | 3.9 ms | Average response latency of active workloads |
 | **Warm Latency (p50)** | 3.8 ms | Median latency (50% of requests are faster than this) |
 | **Warm Latency (p99)** | 5.4 ms | Tail latency (99% of requests are faster than this) |
+| **Scaling Acceleration (1 to 100)** | 1.8 s | Time to spin up and route traffic to 100 concurrent MicroVM instances |
+| **Overlay Routing Convergence** | 120 ms | Synchronization latency of the EVPN/BGP overlay routing tables |
 | **Provisioning Speed** | 4.2 s | Time for `heroctl` CLI to build, push, and schedule a new VM |
