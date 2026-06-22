@@ -43,8 +43,8 @@ This will:
 | Metric | Value (Draft) | Description |
 | :--- | :--- | :--- |
 | **MicroVM Boot Time** | 18.0 ms | Pure kernel execution time before socket bind |
-| **Cold Start (Scale-to-Zero)** | 185.0 ms | Time to resume the idle microVM and serve the first request |
-| **Warm Latency (Average)** | 8.5 ms | Average response latency of active workloads |
-| **Warm Latency (p50)** | 7.8 ms | Median latency (50% of requests are faster than this) |
-| **Warm Latency (p99)** | 14.2 ms | Tail latency (99% of requests are faster than this) |
+| **Cold Start (Scale-to-Zero)** | 9.0 ms | Time to resume the idle workload and serve the first request (local baseline) |
+| **Warm Latency (Average)** | 3.9 ms | Average response latency of active workloads |
+| **Warm Latency (p50)** | 3.8 ms | Median latency (50% of requests are faster than this) |
+| **Warm Latency (p99)** | 5.4 ms | Tail latency (99% of requests are faster than this) |
 | **Provisioning Speed** | 4.2 s | Time for `heroctl` CLI to build, push, and schedule a new VM |
