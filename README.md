@@ -33,6 +33,7 @@ Explore Infra-Heroes's powerful deployment features through these minimal config
 | **Environment Variables** | [`/features/env-variables`](./features/env-variables) | Demonstrates configuring static environment variables. |
 | **Autoscaling** | [`/features/autoscaling`](./features/autoscaling) | Demonstrates scale-out behavior using `min_replicas` and `max_replicas`. |
 | **Scale to Zero** | [`/features/scale-to-zero`](./features/scale-to-zero) | Demonstrates serverless cold-start capability with `scale_to_zero = true`. |
+| **Cold Start Benchmark** | [`/features/cold-start-benchmark`](./features/cold-start-benchmark) | Benchmark suite to measure cold starts and request latencies. |
 | **Private Services** | [`/features/private-service`](./features/private-service) | Demonstrates internal-only networking using `private = true`. |
 | **Custom Domains** | [`/features/custom-domains`](./features/custom-domains) | Demonstrates custom CNAMEs via `custom_domains`. |
 | **Database (PostgreSQL)** | [`/features/database-postgres`](./features/database-postgres) | Demonstrates running a Postgres database with persistent volumes and secrets. |
