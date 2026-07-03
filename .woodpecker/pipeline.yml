@@ -5,12 +5,11 @@ steps:
   validate:
     image: golang:1.26-alpine
     environment:
-      GITHUB_TOKEN:
-        from_secret: github_token
+      CODEBERG_TOKEN:
+        from_secret: codeberg_token
     commands:
       - apk add --no-cache git build-base
-      - git config --global url."https://$${GITHUB_TOKEN}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
-      - git clone --depth 1 https://github.com/Infra-Heroes/heroctl.git /tmp/heroctl
+      - git clone --depth 1 https://codeberg.org/InfraHeroes/heroctl.git /tmp/heroctl
       - (cd /tmp/heroctl && CGO_ENABLED=0 go build -o /usr/local/bin/heroctl ./cmd/heroctl)
       - |
         status=0
