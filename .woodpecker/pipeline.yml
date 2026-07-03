@@ -9,6 +9,10 @@ steps:
         from_secret: codeberg_token
     commands:
       - apk add --no-cache git build-base
+      - printf 'machine codeberg.org\nlogin ci\npassword ' > /root/.netrc
+      - printenv CODEBERG_TOKEN >> /root/.netrc
+      - printf '\n' >> /root/.netrc
+      - chmod 600 /root/.netrc
       - git clone --depth 1 https://codeberg.org/InfraHeroes/heroctl.git /tmp/heroctl
       - (cd /tmp/heroctl && CGO_ENABLED=0 go build -o /usr/local/bin/heroctl ./cmd/heroctl)
       - |
