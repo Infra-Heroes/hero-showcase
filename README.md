@@ -5,6 +5,7 @@
 **A curated collection of deployment-ready examples for the Infra-Heroes PaaS.**
 
 [![Validate](https://github.com/Infra-Heroes/hero-showcase/actions/workflows/validate.yml/badge.svg)](https://github.com/Infra-Heroes/hero-showcase/actions/workflows/validate.yml)
+[![status-badge](https://woodpecker.infra-heroes.de/api/badges/InfraHeroes/showcase/status.svg)](https://woodpecker.infra-heroes.de/repos/InfraHeroes/showcase)
 
 This repository provides boilerplate code and configurations (`hero.toml`) to get your applications running on Infra-Heroes in seconds. Whether you're building a static frontend or a robust backend API, you'll find a starting point here.
 
@@ -64,7 +65,7 @@ Deploying any of these examples is as simple as using the `heroctl` CLI!
    cd go-http
    heroctl deploy
    ```
-   
+
 That's it! `heroctl` will read the `hero.toml` file, package the context, and stream the build and deployment logs directly to your terminal.
 
 ---
