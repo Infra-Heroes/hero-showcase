@@ -4,7 +4,7 @@
 
 **A curated collection of deployment-ready examples for the Infra-Heroes PaaS.**
 
-[![Validate](https://github.com/Infra-Heroes/hero-showcase/actions/workflows/validate.yml/badge.svg)](https://github.com/Infra-Heroes/hero-showcase/actions/workflows/validate.yml)
+[![status-badge](https://ci.infra-heroes.de/api/badges/InfraHeroes/hero-showcase/status.svg)](https://ci.infra-heroes.de/repos/InfraHeroes/hero-showcase)
 
 This repository provides boilerplate code and configurations (`hero.toml`) to get your applications running on Infra-Heroes in seconds. Whether you're building a static frontend or a robust backend API, you'll find a starting point here.
 
