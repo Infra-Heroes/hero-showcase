@@ -3,7 +3,7 @@ when:
 
 steps:
   validate:
-    image: golang:1.26-alpine
+    image: golang:1.27-alpine
     environment:
       CODEBERG_TOKEN:
         from_secret: codeberg_token
