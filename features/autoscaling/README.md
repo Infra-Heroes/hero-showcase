@@ -16,4 +16,15 @@ This showcase feature demonstrates Infra-Heroes's horizontal autoscaling, driven
    heroctl deploy --project default
    ```
 2. Open the deployed URL and click **"Spike CPU for 10 seconds"** a few times in a row (or hit `/stress` with a load-testing tool).
-3. Watch the replica count in `heroctl status` — sustained CPU pressure should scale the service out toward `max_replicas`, and it should scale back down toward `min_replicas` once the spikes stop.
+3. Watch the replica count with `heroctl deployments list --project default`, and the load with `heroctl deployments metrics <app> --project default` — sustained CPU pressure should scale the service out toward `max_replicas`, and it should scale back down toward `min_replicas` once the spikes stop.
+
+## 🎚️ Tune the thresholds
+
+By default a replica is added above 80 % average CPU and removed below 20 %. Set your own per app in `hero.toml`; memory can be watched as well:
+
+```toml
+[labels]
+"hero-scale-cpu-up"    = "70"
+"hero-scale-cpu-down"  = "30"
+"hero-scale-memory-up" = "80"
+```
