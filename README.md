@@ -77,19 +77,25 @@ You can check if your `hero.toml` syntax is correct at any time using the local 
 heroctl validate
 ```
 
-We also provide a **GitHub Action** to automatically validate your configurations in your CI/CD pipelines! Add this to your `.github/workflows/validate.yml`:
+## 🚀 Deploy from GitHub
+
+Our **GitHub Action** [`infra-heroes/deploy-action`](https://github.com/Infra-Heroes/deploy-action) validates your `hero.toml` and deploys on every push. Create a token with `heroctl tokens create --name github --scope deploy`, store it as the secret `HERO_TOKEN`, and add `.github/workflows/deploy.yml`:
 
 ```yaml
-name: Validate hero.toml
-on: [push, pull_request]
+name: Deploy to Infra-Heroes
+on:
+  push:
+    branches: [main]
 
 jobs:
-  validate:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate hero.toml
-        uses: Infra-Heroes/heroctl@main
+      - uses: infra-heroes/deploy-action@v1
         with:
-          config_path: "hero.toml"
+          token: ${{ secrets.HERO_TOKEN }}
+          project: my-project
 ```
+
+The runner builds the image from your `Dockerfile`, pushes it and deploys it. Add `image: docker.io/library/nginx:1.31` to deploy an existing image instead. The step prints the app's URL and writes a summary to the job page.
