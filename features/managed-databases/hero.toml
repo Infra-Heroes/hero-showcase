@@ -1,0 +1,23 @@
+[app]
+name = "feature-managed-databases"
+
+[deploy]
+port = 8080
+health_path = "/"
+
+# Each block becomes a private database next to the app, with a volume and a
+# generated password. The app receives the URL as an environment variable.
+[[databases]]
+name = "db"
+engine = "postgres"      # -> DATABASE_URL
+size_gb = 1
+
+[[databases]]
+name = "my"
+engine = "mariadb"       # MySQL compatible
+env = "MYSQL_URL"        # a second SQL database needs its own variable name
+size_gb = 1
+
+[[databases]]
+name = "cache"
+engine = "redis"         # -> REDIS_URL
