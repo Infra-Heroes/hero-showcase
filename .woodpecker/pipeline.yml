@@ -11,17 +11,12 @@ when:
 steps:
   validate:
     image: golang:1.27-alpine
-    environment:
-      CODEBERG_TOKEN:
-        from_secret: codeberg_token
     commands:
-      - apk add --no-cache git build-base
-      - printf 'machine codeberg.org\nlogin ci\npassword ' > /root/.netrc
-      - printenv CODEBERG_TOKEN >> /root/.netrc
-      - printf '\n' >> /root/.netrc
-      - chmod 600 /root/.netrc
-      - git clone --depth 1 https://codeberg.org/InfraHeroes/heroctl.git /tmp/heroctl
-      - (cd /tmp/heroctl && CGO_ENABLED=0 go build -o /usr/local/bin/heroctl ./cmd/heroctl)
+      - apk add --no-cache curl
+      # The newest heroctl release, from the website (Codeberg no longer resolves).
+      - TAG=$(curl -fsS https://infra-heroes.de/downloads/heroctl/latest)
+      - curl -fsSL -o /usr/local/bin/heroctl "https://infra-heroes.de/downloads/heroctl/$TAG/heroctl-linux-amd64"
+      - chmod +x /usr/local/bin/heroctl
       - |
         status=0
         for f in features/*/hero.toml; do
